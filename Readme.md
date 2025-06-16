@@ -25,7 +25,8 @@ Attribution is required. But implementation is open.
 ---
 
 ## 📂 What’s Included
-
+- [`Readme.md`]
+- (./Readme.md) — full stylized guide
 - [`Claudia_Lock_Protocol.html`](./Claudia_Lock_Protocol.html) — full stylized guide
 - [`Claudia Lock Protocol.pdf`](./Claudia Lock Protocol – Full Guide.pdf) — print-ready version
 - [`LICENSE.md`](./LICENSE.MD) — Custom Open Attribution License (CLP-OAL)
