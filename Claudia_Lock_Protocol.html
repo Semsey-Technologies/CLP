@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claudia Lock Protocol – Full Guide</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f7fa;
+      color: #222;
+      padding: 2rem;
+      line-height: 1.7;
+    }
+    h1, h2, h3 {
+      color: #1a1a1a;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+    .section {
+      margin-bottom: 2.5rem;
+    }
+    .note {
+      background: #e3f6e8;
+      border-left: 6px solid #2e8b57;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    ul, ol {
+      margin-left: 1.5rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.75rem;
+    }
+    th {
+      background: #e9ecef;
+    }
+    blockquote {
+      margin: 1rem 0;
+      padding-left: 1rem;
+      border-left: 4px solid #999;
+      color: #555;
+    }
+    .license {
+      background: #f0f0f0;
+      border-left: 6px solid #555;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Claudia Lock Protocol</h1>
+<div class="note">
+  <strong>Why This Is Free:</strong>  
+  I’m not releasing this to make money — I’m releasing it because I care.  
+  About the safety of guests. About cast members. About the kind of systems people can actually trust.  
+  Security is an act of respect, not just a technical goal.  
+  <br><br>
+  I’m offering this openly, but with one simple expectation:  
+  <strong>If you use it, credit the source.</strong>  
+  Not for ego. For accountability — and so the spirit behind it travels with the system itself.
+</div>
+<div class="section">
+  <h2>1. What is it?</h2>
+  <p>The Claudia Lock Protocol (CLP) is a physical-digital security framework designed for environments where failure is not an option — think Disney's core infrastructure, classified government terminals, R&D vaults, etc.</p>
+  <p>CLP eliminates traditional vulnerabilities by:</p>
+  <ul>
+    <li>Removing all human-known passwords</li>
+    <li>Using air-gapped systems and one-time keys</li>
+    <li>Rotating access randomly</li>
+    <li>Preventing insider threats and social engineering</li>
+  </ul>
+  <div class="note"><strong>Bottom Line:</strong> If you're physically not in the right place at the right time with the right key, you don’t get in. Period.</div>
+</div>
+
+<div class="section">
+  <h2>2. What does it do?</h2>
+  <p>CLP enforces a system where:</p>
+  <ul>
+    <li>No persistent passwords exist — not even admins know them</li>
+    <li>All access is temporary, auditable, and locked by time and device</li>
+    <li>Staff roles change daily and are unpredictable</li>
+    <li>Updates are validated offline before touching the LAN</li>
+    <li>There is no emergency override — only reissuance through protocol</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>3. How does it work?</h2>
+  <ol>
+    <li><strong>Start of Day:</strong> A random staff member is assigned admin duty (rotation handled offline).</li>
+    <li><strong>Generate OTP:</strong> They insert a clean USB into an <em>air-gapped, Live OS Keygen Machine</em>. The OTP (One-Time Password) is created and stored encrypted on the USB.</li>
+    <li><strong>Access Room:</strong> Admin enters the secured room (2 guards, PIN required, hidden/visible surveillance).</li>
+    <li><strong>Use OTP:</strong> They insert the USB into the Access Terminal. If the USB and machine ID match, the terminal unlocks for a limited time.</li>
+    <li><strong>Log + Expire:</strong> The terminal logs a hash-only ID. After use, the OTP and USB self-wipe.</li>
+  </ol>
+</div>
+
+<div class="section">
+  <h2>4. How are updates handled?</h2>
+  <ol>
+    <li><strong>Step 1 – Download:</strong> A single, isolated Live OS machine downloads updates (Ethernet only, no Wi-Fi).</li>
+    <li><strong>Step 2 – Disconnect:</strong> After download, the cable is physically pulled.</li>
+    <li><strong>Step 3 – Transfer:</strong> Updates are transferred via crossover cable to a Scan Server.</li>
+    <li><strong>Step 4 – Verify:</strong> Scan Server checks hashes, signatures, and malware.</li>
+    <li><strong>Step 5 – Push:</strong> Updates are delivered to LAN only if verified and only during push window.</li>
+  </ol>
+</div>
+
+<div class="section">
+  <h2>5. How do you set it up?</h2>
+  <ul>
+    <li>Build an air-gapped machine with no network interfaces (can be Raspberry Pi, old laptop, etc.).</li>
+    <li>Install a Live OS like Tails or Kali with a script that creates encrypted OTPs daily.</li>
+    <li>Use tamper-evident USBs (write-once preferred, with hardware crypto chip).</li>
+    <li>Deploy access terminals with USB port readers and whitelist validation logic.</li>
+    <li>Create access room policies — camera setup, PIN issuance on clock-in, physical guard rotation.</li>
+    <li>For updates: Have one update PC, one scan server, and protected LAN push point.</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>6. What happens if...?</h2>
+  <table>
+    <tr><th>Scenario</th><th>Response</th></tr>
+    <tr><td>USB is lost</td><td>Reissued in person via guarded reset flow</td></tr>
+    <tr><td>Token is cloned</td><td>It won't match machine ID, access denied</td></tr>
+    <tr><td>Admin is compromised</td><td>Admin cannot predict future access; traceable</td></tr>
+    <tr><td>Update is corrupted</td><td>Scan server blocks it; logs issue</td></tr>
+    <tr><td>Terminal stolen</td><td>It cannot function without token + rotation + time window</td></tr>
+  </table>
+</div>
+
+<div class="section">
+  <h2>7. License: Claudia Lock Protocol – Open Attribution License (CLP-OAL)</h2>
+  <div class="license">
+    <p><strong>Version 1.0 – June 2025</strong></p>
+    <ol>
+      <li><strong>Free Use:</strong> CLP can be used commercially, educationally, or personally.</li>
+      <li><strong>Required Attribution:</strong> “Based on the Claudia Lock Protocol, created by Don Semsey, Semsey Technologies – ClaudiaAI Secure Intelligence Division.”</li>
+      <li><strong>Don't Misrepresent:</strong> Changes must be stated; no false authorship.</li>
+      <li><strong>Trademark Respect:</strong> “ClaudiaAI,” “Semsey Technologies,” and “Don Semsey” are not to be used in endorsements without permission.</li>
+      <li><strong>Warranty Disclaimer:</strong> Provided as-is. No liability for results.</li>
+      <li><strong>Registry Encouraged:</strong> Implementers may opt to be listed on the official registry.</li>
+    </ol>
+    <p><strong>Contact:</strong> <a href="mailto:SemseyTechnologies@proton.me">SemseyTechnologies@proton.me</a></p>
+  </div>
+</div>
+
+<div class="section">
+  <h2>8. Final Thought</h2>
+  <blockquote>
+    CLP isn’t just a lock — it’s a philosophy.<br />
+    Access isn’t a right. It’s a one-time privilege, tightly earned.
+  </blockquote>
+</div>
+
+</body>
+</html>
