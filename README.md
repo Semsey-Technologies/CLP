@@ -1,2 +1,0 @@
-# CLP
-Claudia Lock Protocol
