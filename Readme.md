@@ -32,13 +32,6 @@ Attribution is required. But implementation is open.
 
 ---
 
-## 🔗 Live Web Version (Optional)
-
-If you enabled GitHub Pages, your HTML guide may be viewable at:  
-📎 `https://semsey-technologies.github.io/CIP/Claudia_Lock_Protocol.html`
-
----
-
 ## 📣 Contact
 
 Want to talk about future ideas, implementation, or consulting?
@@ -51,4 +44,5 @@ Semsey Technologies
 ---
 
 > Built to protect. Released with care.
+
 > ✨ More ideas await... if you're curious enough to open the next file.
