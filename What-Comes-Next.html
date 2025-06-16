@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>If You Want What Comes Next...</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0b1d51; /* Disney midnight blue */
+      color: #fff8e7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.3rem;
+      color: #ffd700; /* Disney gold */
+      text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #f0e6c0;
+      margin-bottom: 2rem;
+      max-width: 540px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      max-width: 750px;
+      width: 90%;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid #ffd70022;
+      padding: 16px;
+      border-radius: 14px;
+      transition: 0.3s ease;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
+      font-weight: bold;
+      color: #ffffff;
+      font-size: 1.05rem;
+      letter-spacing: 0.5px;
+      position: relative;
+    }
+
+    .project-card::after {
+      content: "✨";
+      position: absolute;
+      bottom: 8px;
+      right: 10px;
+      font-size: 1.2rem;
+      opacity: 0.7;
+    }
+
+    .project-card:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-6px);
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+      color: #ffd700;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #aaaaaa;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>These Are Just the Names… For Now.</h1>
+  <p>
+    Every one of these is a future project — waiting to be unlocked.  
+    They were built with Disney in mind.  
+    But anyone with a dream can bring them to life.
+  </p>
+
+  <div class="project-grid">
+    <div class="project-card">FlashGuard Protocol</div>
+    <div class="project-card">TempShield</div>
+    <div class="project-card">SnapShop</div>
+    <div class="project-card">ImpulseMagic</div>
+    <div class="project-card">Clairi</div>
+    <div class="project-card">LoopLine</div>
+    <div class="project-card">MagicTracks</div>
+    <div class="project-card">PixiPoints</div>
+  </div>
+
+  <footer>
+    © 2025 Semsey Technologies – Inspired by Imagination
+  </footer>
+
+</body>
+</html>
