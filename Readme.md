@@ -28,7 +28,7 @@ Attribution is required. But implementation is open.
 
 - [`Claudia_Lock_Protocol.html`](./Claudia_Lock_Protocol.html) — full stylized guide
 - [`Claudia_Lock_Protocol.pdf`](./Claudia_Lock_Protocol.pdf) — print-ready version
-- [`LICENSE.md`](./LICENSE.md) — Custom Open Attribution License (CLP-OAL)
+- [`LICENSE.md`](./LICENSE.MD) — Custom Open Attribution License (CLP-OAL)
 
 ---
 
